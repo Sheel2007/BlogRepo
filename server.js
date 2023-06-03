@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const mardownIt = require('markdown-it')
 const marked = require('marked');
+const frontMatter = require('front-matter');
 
 
 const md = new mardownIt();
@@ -43,13 +44,22 @@ function getBlogPosts() {
       const postPath = path.join(postsDir, file);
       const content = fs.readFileSync(postPath, 'utf-8');
       const slug = path.parse(file).name;
-      const html = md.render(content);
-      return { slug, html };
-    });
+
+      // Extract the date from the front matter
+      const frontMatterMatch = content.match(/^---\n([\s\S]+?)\n---/);
+      const frontMatter = frontMatterMatch ? frontMatterMatch[1] : '';
+      const dateMatch = frontMatter.match(/^date:\s*(.+)$/im);
+      const date = dateMatch ? dateMatch[1] : '';
+
+      const contentWithoutFrontMatter = content.replace(/^---\n([\s\S]+?)\n---/, '');
+
+      const html = marked(contentWithoutFrontMatter);
+      return { slug, date, html };
+    })
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
+
   return posts;
 }
-
-
 
 
 // Helper function to get a specific blog post by slug
@@ -62,9 +72,6 @@ function getBlogPostBySlug(slug) {
   }
   return null;
 }
-
-
-
 
 
 // Start the server

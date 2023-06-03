@@ -1,0 +1,26 @@
+html {
+	scroll-behavior: smooth;
+  background-color: #1b1b1b;
+}
+/* Example Markdown styles */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.5;
+	margin: 20px;
+  color: white;
+}
+  
+h1 {
+  font-size: 28px;
+  padding-top: 10px;
+  padding-left: 8%;
+  text-align: left;
+}
+
+hr {
+  display: none;
+}
+
+.blog-post div p:first-of-type {
+    display: none;
+}

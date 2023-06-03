@@ -1,3 +1,8 @@
+---
+title: My First Post
+date: 2023-06-03
+---
+
 # My First Post
 
 Welcome to my blog! This is my first blog post, and I'm excited to share my thoughts with you.
