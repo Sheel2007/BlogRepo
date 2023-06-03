@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Blog</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <h1>My Blog</h1>
+  <hr>
+  <ul>
+    <% posts.forEach((post) => { %>
+      <li>
+        <a href="/blog/<%= post.slug %>"><%= post.slug %></a>
+      </li>
+    <% }); %>
+  </ul>
+</body>
+</html>

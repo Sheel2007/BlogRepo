@@ -1,0 +1,44 @@
+html {
+	scroll-behavior: smooth;
+  background-color: #1b1b1b;
+}
+/* Example Markdown styles */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.5;
+	margin: 20px;
+  color: white;
+}
+  
+h1 {
+  font-size: 28px;
+  padding-top: 10px;
+  padding-left: 8%;
+  text-align: left;
+}
+
+hr {
+  width: 90%;
+  margin-bottom: 200px;
+}
+
+ul {
+  width: 90%;
+  padding-left: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+li {
+  list-style: none;
+  border: 1px solid white;
+  text-align: center;
+
+}
+  
+
+a {
+  text-decoration: none;
+  color: white;
+}
