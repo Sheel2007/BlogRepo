@@ -1,10 +1,14 @@
+* {
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif
+}
+
 html {
 	scroll-behavior: smooth;
-  background-color: #1b1b1b;
+  background-color: #080808;
 }
 /* Example Markdown styles */
 body {
-	font-family: Arial, Helvetica, sans-serif;
 	line-height: 1.5;
 	margin: 20px;
   color: white;
@@ -27,18 +31,49 @@ ul {
   padding-left: 50px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  /* grid-gap: 20px; */
+}
+
+ul div {
+  position: relative;
+  width: 70%;
+  /* margin-left: 20%; */
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.5s;
+  margin-bottom: 20px;
+}
+
+ul div:hover {
+  /* position: absolute; */
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 li {
   list-style: none;
-  border: 1px solid white;
   text-align: center;
-
+  /* border: 4px solid black; */
+  border-radius: 0.75rem;
+  background-color: #262626;
+  margin-top: -30px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
 }
-  
 
 a {
   text-decoration: none;
   color: white;
+}
+
+img {
+  width: 100%;
+  border-radius: 0.75rem;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+footer {
+  margin: 0;
+  padding: 0;
 }

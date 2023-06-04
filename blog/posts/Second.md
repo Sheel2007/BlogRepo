@@ -1,6 +1,7 @@
 ---
-title: My First Post
+title: My Second Post
 date: 2023-06-04
+image: /images/img2.jpg
 ---
 
 

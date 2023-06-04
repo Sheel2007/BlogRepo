@@ -9,10 +9,15 @@
   <hr>
   <ul>
     <% posts.forEach((post) => { %>
-      <li>
-        <a href="/blog/<%= post.slug %>"><%= post.slug %></a>
-      </li>
+      <div>
+        <img src="<%= post.imagePath %>" alt="<%= post.title %> Image">
+        <li>
+          <h2><%= post.slug %></h2>
+          <p><a href="/blog/<%= post.slug %>">Read More</a></p>
+        </li>
+      </div>
     <% }); %>
   </ul>
+  <footer>Stuff and things</footer>
 </body>
 </html>

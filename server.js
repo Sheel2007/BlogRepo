@@ -3,10 +3,10 @@ const fs = require('fs');
 const path = require('path');
 const mardownIt = require('markdown-it')
 const marked = require('marked');
-const frontMatter = require('front-matter');
-
-
+const fm = require('front-matter');
 const md = new mardownIt();
+
+
 const app = express();
 const PORT = 3000;
 
@@ -51,15 +51,37 @@ function getBlogPosts() {
       const dateMatch = frontMatter.match(/^date:\s*(.+)$/im);
       const date = dateMatch ? dateMatch[1] : '';
 
-      const contentWithoutFrontMatter = content.replace(/^---\n([\s\S]+?)\n---/, '');
+      const metadata = extractMetadata(content);
+      const { title, heading } = metadata;
 
-      const html = marked(contentWithoutFrontMatter);
-      return { slug, date, html };
+      const imagePath = `/images/${slug}.jpg`; // Path to the associated image
+      // console.log(content);
+      return { slug, date, title, imagePath };
     })
     .sort((a, b) => new Date(b.date) - new Date(a.date));
 
   return posts;
 }
+
+function extractMetadata(content) {
+  const metadata = {};
+  const lines = content.split('\n');
+
+  let index = 0;
+  while (index < lines.length && lines[index].trim() !== '---') {
+    const line = lines[index].trim();
+    if (line) {
+      const [key, value] = line.split(':').map((part) => part.trim());
+      metadata[key] = value;
+    }
+    index++;
+  }
+
+  const html = lines.slice(index + 1).join('\n').trim();
+
+  return { metadata, html };
+}
+
 
 
 // Helper function to get a specific blog post by slug
