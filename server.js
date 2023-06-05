@@ -52,11 +52,15 @@ function getBlogPosts() {
       const date = dateMatch ? dateMatch[1] : '';
 
       const metadata = extractMetadata(content);
+      const excerpt = extractExcerpt(content);
+      const truncatedContent = truncateContent(content, 150); // Truncate the content
+      const html = md.render(truncatedContent);
+
       const { title, heading } = metadata;
 
       const imagePath = `/images/${slug}.jpg`; // Path to the associated image
       // console.log(content);
-      return { slug, date, title, imagePath };
+      return { slug, date, title, excerpt, imagePath, html };
     })
     .sort((a, b) => new Date(b.date) - new Date(a.date));
 
@@ -81,6 +85,28 @@ function extractMetadata(content) {
 
   return { metadata, html };
 }
+
+// Modify the extractExcerpt function to extract only the excerpt text
+function extractExcerpt(content) {
+  const match = content.match(/excerpt:(.*?)(?:\r?\n|$)/i); // Extract the excerpt text
+  if (match && match[1]) {
+    const excerpt = match[1].trim();
+    return excerpt;
+  }
+  return '';
+}
+
+
+// Helper function to truncate the content after the excerpt
+function truncateContent(content, maxLength) {
+  if (content.length > maxLength) {
+    const truncatedContent = content.slice(0, maxLength);
+    return truncatedContent;
+  }
+  return content;
+}
+
+
 
 
 

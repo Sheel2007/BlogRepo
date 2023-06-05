@@ -1,6 +1,8 @@
 ---
 title: My First Post
 date: 2023-06-03
+image: /images/img1.jpg
+excerpt: Welcome to my blog! This is my first blog post, and I'm excited to share my thoughts with you.
 ---
 
 # My First Post
