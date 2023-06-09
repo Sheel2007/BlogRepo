@@ -31,4 +31,11 @@ Vestibulum nec mi commodo, iaculis felis vitae, commodo mi. Aenean non tincidunt
 
 In dapibus turpis sed massa convallis euismod. Aliquam sed sem id sapien efficitur dictum. Nam sed odio at est tincidunt lobortis. Suspendisse ultrices eu nisi id lacinia. Curabitur lobortis interdum metus ac congue.
 
+```
+def add(x, y):
+    return x + y
+
+print(add(1, 3))
+```
+
 Enjoy reading my blog post! Stay tuned for more to come.
