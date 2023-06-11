@@ -4,9 +4,10 @@ const path = require('path');
 const markdownIt = require('markdown-it')
 const marked = require('marked');
 const fm = require('front-matter');
+const matter = require('gray-matter');
+
+
 const md = new markdownIt();
-
-
 const app = express();
 const PORT = 3000;
 
@@ -59,7 +60,7 @@ function getBlogPosts() {
       const { title, heading } = metadata;
 
       const imagePath = `/images/${slug}.jpg`; // Path to the associated image
-      // console.log(content);
+      // console.log(date);
       return { slug, date, title, excerpt, imagePath, html };
     })
     .sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -107,16 +108,22 @@ function truncateContent(content, maxLength) {
 }
 
 
-
-
-
 // Helper function to get a specific blog post by slug
 function getBlogPostBySlug(slug) {
   const postPath = path.join(__dirname, 'blog', 'posts', `${slug}.md`);
   if (fs.existsSync(postPath)) {
     const content = fs.readFileSync(postPath, 'utf-8');
+    const { data, content: markdownContent } = matter(content)
+    const date = data.date;
     const html = marked(content);
-    return { slug, html };
+
+    const postDate = date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: '2-digit'
+    });
+
+    return { slug, html, postDate };
   }
   return null;
 }
