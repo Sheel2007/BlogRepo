@@ -12,6 +12,8 @@ body {
 	line-height: 1.5;
 	margin: 20px;
   color: white;
+  display: flex;
+  justify-content: center;
 }
   
 h1 {
@@ -20,20 +22,47 @@ h1 {
   text-align: left;
 }
 
+p {
+  max-width: 800px;
+  font-size: 16px;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: inherit;
+  background: #262626;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  transform: scale(0.98);
+}
+
+a {
+  text-decoration: none;
+  color: #f4f4f4;
+}
+
 .hljs {
-  background-color: #1b1b1b;
+  background-color: #262626;
 }
 
 pre {
   /* background-color: rgb(5, 5, 5); */
   width: 70%;
-  border: 2px solid rgb(112, 116, 124);
+  /* border: 2px solid #262626; */
+  margin-left: -10px;
 }
 
 code {
   display: block;
   margin: 10px;
-  font-size: 1rem;
+  font-size: 13px;
   font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
 
