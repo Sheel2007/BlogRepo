@@ -17,25 +17,23 @@ body {
 h1 {
   font-size: 28px;
   padding-top: 10px;
-  padding-left: 8%;
   text-align: left;
 }
 
+.hljs {
+  background-color: #1b1b1b;
+}
+
 pre {
-  background-color: rgb(5, 5, 5);
-  width: 40%;
-}
-
-pre:first-child {
-  padding-top: 10px;
-}
-
-pre:last-child {
-  padding-bottom: 10px;
+  /* background-color: rgb(5, 5, 5); */
+  width: 70%;
+  border: 2px solid rgb(112, 116, 124);
 }
 
 code {
-  font-size: 15px;
+  display: block;
+  margin: 10px;
+  font-size: 1rem;
   font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
 

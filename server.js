@@ -1,10 +1,10 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-const mardownIt = require('markdown-it')
+const markdownIt = require('markdown-it')
 const marked = require('marked');
 const fm = require('front-matter');
-const md = new mardownIt();
+const md = new markdownIt();
 
 
 const app = express();

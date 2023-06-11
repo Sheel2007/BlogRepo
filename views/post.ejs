@@ -2,6 +2,7 @@
 <html>
 <head>
   <title><%= post.slug %></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
   <link rel="stylesheet" href="/css/blogs.css">
 </head>
 <body>
@@ -11,6 +12,7 @@
     <!-- <p><%= post.date %></p> -->
     <div><%- post.html %></div>
   </div>
-
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
