@@ -1,7 +1,4 @@
-@font-face {
-  font-family: SFMono-Regular;
-  src: url('SF-Mono-Regular.ttf');
-}
+@import url('SF-Mono-Regular.ttf');
 
 html {
 	scroll-behavior: smooth;
