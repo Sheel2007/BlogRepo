@@ -88,3 +88,7 @@ hr {
 .blog-post div p:first-of-type {
     display: none;
 }
+
+img {
+  width: 100%;
+}

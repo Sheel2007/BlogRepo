@@ -7,6 +7,8 @@ excerpt: With tech changing everyday, what are the best programming languages in
 
 # Top 5 Programming Languages in 2023
 
+![GreyPhoto](/images/Top%205%20Programming%20Languages%20in%202023.jpg)
+
 
 As technology continues to evolve at an unprecedented pace, programming languages remain essential tools for developers to create and innovate. The right programming language can help you build anything from simple scripts to complex web applications, mobile apps, and artificial intelligence systems. With that in mind, let's explore the top five programming languages to watch in 2023.
 

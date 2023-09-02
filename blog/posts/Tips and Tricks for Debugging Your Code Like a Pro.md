@@ -7,6 +7,7 @@ excerpt: Are you tired of banging your head against the wall trying to find bugs
 
 # How to Debug like a Pro!
 
+![Code](/images/Tips%20and%20Tricks%20for%20Debugging%20Your%20Code%20Like%20a%20Pro.jpg)
 
 Debugging is an essential part of software development. It can be time-consuming and frustrating, but it's a critical skill for any programmer to master. In this blog post, we'll discuss some tips and tricks for debugging your code like a pro.
 

@@ -7,6 +7,8 @@ excerpt: Learn how to build a simple web application using Flask in Python with 
 
 # Building Your First Web Application with Python
 
+![html](/images/Building%20Your%20First%20Web%20Application%20with%20Python.jpg)
+
 Python is a popular programming language for web development due to its ease of use and powerful libraries. In this blog post, we'll walk through the process of building a simple web application using Python and Flask.
 
 ## Prerequisites

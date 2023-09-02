@@ -7,6 +7,8 @@ excerpt: Variables are the building blocks of Python. Understanding how to use v
 
 # Python Introduction: Variables and Datatypes
 
+![Computer](/images/Python%20Variables%20and%20Datatypes.jpg)
+
 Python is a high level, dynamically typed programming language, which means that a programmer does not need to specify the data type of a variable when creating it. Instead, Python assigns the data type to the variable based on the value it is assigned.
 
 A variable in Python is a named container that stores a value. Variables can store values of different data types, such as integers, floating-point numbers, strings, and lists. To create a variable in Python, you simply need to assign a value to a name. For example:
